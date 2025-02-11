@@ -8,167 +8,157 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const timetableDay1 = [
   {
     id: 1,
-    time: "11:00",
+    time: "11:00-11:30",
     artist: "吹奏楽部"
   },
   {
     id: 2,
-    time: "11:20",
+    time: "11:30-12:00",
     artist: "オープニング"
   },
   {
     id: 3,
-    time: "11:35",
+    time: "12:00-12:30",
     artist: "社交ダンス部"
   },
   {
     id: 4,
-    time: "11:55",
+    time: "12:30-13:30",
     artist: "カラオケ大会 第1部"
   },
   {
     id: 5,
-    time: "13:15",
+    time: "13:30-14:30",
     artist: "筋肉グランプリ"
   },
   {
     id: 6,
-    time: "14:25",
+    time: "14:30-15:30",
     artist: "ミュージックサークル"
   },
   {
     id: 7,
-    time: "15:35",
+    time: "15:30-16:15",
     artist: "Meio Collection 第1部"
   },
   {
     id: 8,
-    time: "16:15",
+    time: "16:15-16:45",
     artist: "抽選会 第1部"
   },
   {
     id: 9,
-    time: "16:55",
+    time: "16:45-17:30",
     artist: "Solseamery"
   },
   {
     id: 10,
-    time: "17:30",
+    time: "17:30-18:00",
     artist: "名桜エイサー"
   },
   {
     id: 11,
-    time: "18:00",
+    time: "18:00-18:40",
     artist: "ダンスコラボ"
   },
   {
     id: 12,
-    time: "18:40",
+    time: "18:40-19:20",
     artist: "MIKKO"
   },
   {
     id: 13,
-    time: "18:50",
+    time: "19:20-20:00",
     artist: "Leonald"
   },
   {
     id: 14,
-    time: "19:30",
+    time: "20:00-20:30",
     artist: "YOSHIKI EZAKI"
   },
   {
     id: 15,
-    time: "19:50",
+    time: "20:30-20:45",
     artist: "1日目閉会式"
-  },
-  {
-    id: 16,
-    time: "20:00",
-    artist: "1日目終了"
-  },
+  }
 ];
 
 const timetableDay2 = [
   {
-    id: 17,
-    time: "11:00",
+    id: 16,
+    time: "11:00-11:30",
     artist: "オープニング"
   },
   {
-    id: 18,
-    time: "11:10",
+    id: 17,
+    time: "11:30-12:00",
     artist: "吹奏楽部コラボ"
   },
   {
-    id: 19,
-    time: "11:50",
+    id: 18,
+    time: "12:00-12:30",
     artist: "K-POP サークル"
   },
   {
-    id: 20,
-    time: "12:25",
+    id: 19,
+    time: "12:30-13:30",
     artist: "借りだせ！やんばるの森"
   },
   {
-    id: 21,
-    time: "13:25",
+    id: 20,
+    time: "13:30-14:30",
     artist: "カラオケ大会 第2部"
   },
   {
-    id: 22,
-    time: "14:25",
+    id: 21,
+    time: "14:30-15:30",
     artist: "Meio Collection 第2部"
   },
   {
-    id: 23,
-    time: "15:15",
+    id: 22,
+    time: "15:30-16:00",
     artist: "Y-1 グランプリ結果発表"
   },
   {
-    id: 24,
-    time: "15:35",
+    id: 23,
+    time: "16:00-16:30",
     artist: "抽選会 第2部"
   },
   {
-    id: 25,
-    time: "16:25",
+    id: 24,
+    time: "16:30-17:15",
     artist: "ミュージックサークル"
   },
   {
-    id: 26,
-    time: "17:05",
+    id: 25,
+    time: "17:15-17:45",
     artist: "HIPHOP サークル"
   },
   {
-    id: 27,
-    time: "17:30",
+    id: 26,
+    time: "17:45-18:15",
     artist: "K-POP サークル"
   },
   {
-    id: 28,
-    time: "17:55",
+    id: 27,
+    time: "18:15-19:00",
     artist: "名桜エイサー"
   },
   {
-    id: 29,
-    time: "18:45",
+    id: 28,
+    time: "19:00-19:45",
     artist: "D-51"
   },
   {
-    id: 30,
-    time: "19:40",
+    id: 29,
+    time: "19:45-20:00",
     artist: "花火"
   },
   {
-    id: 31,
-    time: "19:45",
+    id: 30,
+    time: "20:00-20:15",
     artist: "フィナーレ・カチャーシー"
-  },
-  {
-    id: 32,
-    time: "20:00",
-    artist: "第31回名桜大学祭終了"
-  },
+  }
 ];
 
 export function TimetableSection() {
@@ -196,9 +186,9 @@ export function TimetableSection() {
                     <Card key={event.id} className="hover:bg-accent/50 transition-colors">
                       <CardContent className="p-2.5 sm:p-3">
                         <div className="flex items-center gap-3">
-                          <div className="flex items-center w-16 sm:w-20 shrink-0">
+                          <div className="flex items-center w-32 sm:w-36 shrink-0">
                             <Clock className="w-3.5 h-3.5 text-muted-foreground mr-1.5" />
-                            <time className="text-sm text-muted-foreground">{event.time}</time>
+                            <time className="text-sm text-muted-foreground font-mono">{event.time}</time>
                           </div>
                           <h3 className="text-sm sm:text-base font-medium truncate">
                             {event.artist}
