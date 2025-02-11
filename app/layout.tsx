@@ -1,14 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { GeistSans } from 'geist/font';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: '第31回名桜大学祭 | 沖縄県名護市の大学祭',
@@ -21,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={inter.className}>
+    <html lang="ja" className={GeistSans.className}>
       <body>
         <ThemeProvider
           attribute="class"
