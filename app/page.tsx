@@ -1,17 +1,19 @@
 import { Hero } from '@/components/hero';
-import { FeaturedSpots } from '@/components/featured-spots';
-import { EventsSection } from '@/components/events-section';
-import { GourmetSection } from '@/components/gourmet-section';
 import { NewsSection } from '@/components/news-section';
+import { FeaturedSpots } from '@/components/featured-spots';
+import { FaqSection } from '@/components/faq-section';
+import { InformationSection } from '@/components/information-section';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <FeaturedSpots />
-      <EventsSection />
-      <GourmetSection />
-      <NewsSection />
+      <div>
+        <NewsSection />
+        <FeaturedSpots />
+        <InformationSection />
+        <FaqSection />
+      </div>
     </div>
   );
 }
