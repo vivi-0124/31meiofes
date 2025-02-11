@@ -3,11 +3,10 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ 
   subsets: ['latin'],
-  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -21,18 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={inter.className}>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <main className="pt-16">{children}</main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="ja">
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
