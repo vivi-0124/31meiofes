@@ -87,7 +87,7 @@ export function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-[280px] sm:w-[320px] bg-white/30 backdrop-blur-sm">
+            <SheetContent className="w-[280px] sm:w-[320px] bg-white/80 backdrop-blur-sm">
               <nav className="flex flex-col space-y-4 mt-8">
                 {links.map((link) => (
                   <Link
