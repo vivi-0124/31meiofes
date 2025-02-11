@@ -37,22 +37,21 @@ export function FeaturedSpots() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">ARTIST</h2>
-          <p className="text-gray-700">豪華アーティストが名桜大学に集結</p>
+          <h2 className="text-4xl font-bold">ARTIST</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {artists.map((artist, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+          {artists.map((artist) => (
             <motion.div
               key={artist.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
-                <div className="relative h-64 overflow-hidden">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1 h-full flex flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={artist.image}
                     alt={artist.name}
@@ -64,7 +63,7 @@ export function FeaturedSpots() {
                     <h3 className="text-2xl font-bold text-white mb-2">{artist.name}</h3>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow">
                   <p className="text-gray-700">{artist.description}</p>
                 </div>
               </div>
@@ -80,8 +79,8 @@ export function FeaturedSpots() {
             className="group"
           >
             <Link href="/timetable">
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1 h-full">
-                <div className="relative h-64 overflow-hidden bg-gray-900">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1 h-full flex flex-col">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-900">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Clock className="w-24 h-24 text-white opacity-20" />
                   </div>
@@ -89,7 +88,7 @@ export function FeaturedSpots() {
                     <h3 className="text-2xl font-bold text-white mb-2">タイムテーブル</h3>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow">
                   <p className="text-gray-700">
                     出演アーティストのステージスケジュールをチェック
                   </p>
