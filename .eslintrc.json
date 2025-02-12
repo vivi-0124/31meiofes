@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "ignorePatterns": ["next-env.d.ts"],
+  "rules": {
+    // 必要なルールのみを有効化
+  }
 }
