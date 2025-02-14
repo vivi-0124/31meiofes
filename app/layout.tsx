@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   verification: {
     google: '68LxJFsEAfu4-6KglvNuGn8GGJ5SFjIjZv-J5WtoTIs',
   },
+  robots: {
+    'max-image-preview': 'large',
+  },
 };
 
 export default function RootLayout({
