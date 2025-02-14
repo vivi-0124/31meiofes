@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
 Sitemap: https://31meiofes.vercel.app/sitemap.xml 
